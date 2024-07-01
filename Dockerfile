@@ -29,9 +29,8 @@ COPY server_start.sh "/opt/sunkenland/server_start.sh"
 COPY BepInExPack_Sunkenland/* ${steam_folder}
 COPY Azumatt-AdminMenu-1.3.0 ${steam_folder}BepInEx
 
-RUN chmod 755 /opt/sunkenland/server_start.sh
 # The command that runs on containr start
-CMD ["/opt/sunkenland/server_start.sh"]
+CMD ["/bin/bash", "/opt/sunkenland/server_start.sh"]
 
 # Make sure you setup port forwarding on your router for port 27015 (if required)
 EXPOSE 27015
