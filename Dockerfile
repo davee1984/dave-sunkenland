@@ -27,6 +27,7 @@ COPY server_start.sh .
 COPY BepInExPack_Sunkenland/* "/root/Steam/steamapps/common/Sunkenland Dedicated Server"
 COPY Azumatt-AdminMenu-1.3.0 "/root/Steam/steamapps/common/Sunkenland Dedicated Server/BepInEx"
 
+CMD chmod 755 /opt/sunkenland/server_start.sh
 # The command that runs on containr start
 CMD /opt/sunkenland/server_start.sh
 
